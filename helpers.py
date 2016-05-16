@@ -5,9 +5,7 @@ FNAME = 'static/Most-Recent-Cohorts-Scorecard-Elements.csv'
 
 
 def get_schools():
-    # open data file, filter for in_office,
-    # add fullname field
-    # then return list of dicts
+    # Return list of dicts
     with open(FNAME, 'r', encoding="latin1") as f:
         newrows = []
         for row in csv.DictReader(f):
