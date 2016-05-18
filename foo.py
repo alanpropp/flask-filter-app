@@ -1,4 +1,6 @@
-from helpers import get_schools
+from helpers import get_schools, filter_by_smallest, filter_by_middle, filter_by_largest
+from operator import itemgetter
+
 #from helpers import filter_by_debt, filter_by_cost, filter_by_earnings, sort_by_criteria
 
 
@@ -7,22 +9,19 @@ schools = get_schools()
 
 
 # this function is the only one that app.py needs to know about
-#cost = COSTT4_A, debt = GRAD_DEBT_MDN_SUPP, retention = RET_FT4 (4 year institutions)
-#median earnings 10 years out = md_earn_wne_p10
-def just_do_it(debt="", cost="", earnings = "", sortby="alpha"):
-    matched_rows = []
+def just_do_it(current = ""):
     datarows = schools
     # first, filter
-    if debt:
-        filteredrows = filter_by_debt(debt, schools)
-    elif cost:
-        filteredrows = filter_by_cost(cost, schools)
-    else:
-        filteredrows = filter_by_earnings(earnings, schools)
+    if current == "smallest":
+        filteredrows = filter_by_smallest(datarows =schools)
+    elif current == "middle":
+        filteredrows = filter_by_middle(datarows =schools)
+    elif current == "largest":
+        filteredrows = filter_by_largest(datarows = schools)
     # then, sort and return the result
     # remember to pass in filteredrows
-    return sort_by_criteria(sortby, filteredrows)
-
+    filteredrows = sorted(filteredrows, key = itemgetter('NPT4_PUB'))
+    return filteredrows
 
 
 def print_record_count():

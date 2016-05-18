@@ -1,12 +1,10 @@
   <form action="{{url_for('results')}}" method="get">
 
-        <strong>Sort by:</strong>
-        <input type="radio" name="sortby" value="alpha" checked>Alphabetical
-        <input type="radio" name="sortby" value="oldest">Oldest
-        <input type="radio" name="sortby" value="youngest"> Youngest
+        <strong>Cost of attending range:</strong>
+        <input type="radio" name="current" value="smallest" > Under $5,000
+        <input type="radio" name="current" value="middle">Between $5,000 and $10,000
+        <input type="radio" name="current" value="largest"> Above $10,000
 
-        <br>
-        <strong>Last name:</strong> <input type="text" name="lastname" value="">
 
         <input type="submit" value="Submit">
   </form>
