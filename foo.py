@@ -19,7 +19,8 @@ def just_do_it(current = ""):
         filteredrows = filter_by_largest(datarows = schools)
     # then, sort and return the result
     # remember to pass in filteredrows
-    filteredrows = sorted(filteredrows, key = itemgetter('NPT4_PUB'))
+    filteredrows = sorted(filteredrows, key = lambda elem: int(elem['NPT4_PUB']))
+ #   filteredrows = sorted(filteredrows, key = itemgetter('NPT4_PUB'))
     return filteredrows
 
 
