@@ -11,7 +11,6 @@ schools = get_schools()
 # this function is the only one that app.py needs to know about
 def just_do_it(current = ""):
     datarows = schools
-    # first, filter
     if current == "smallest":
         filteredrows = filter_by_smallest(datarows =schools)
     elif current == "middle":
