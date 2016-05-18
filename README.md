@@ -2,15 +2,15 @@
 
 ##Main listing page
 
-####The main listing page will look very similar to the 03-congress-locale page, in that it will have a few search categories in which users can type a maximum: post-college debt or cost of attending, and also the minimum earnings by students 10 years out of college. It will also have a link to the data source, and an image about college if I get around to it.
+####The main listing page will have several checkboxes in which you can select the range of public university costs that you can select: smallest, middle, and largest ranges (along with the corresponding costs). It will also have a link to the data source, and a description of how the numbers are calculated based on the dictionary to the data (given that it is not a simple cost of attending.
 
 ##Details page
 
-####The details page will have a list of colleges and links to their homepages, as well as the relevant information (cost of attending, debt, and earnings) sorted by the magnitude of that number
+####The details page will have a list of public colleges and the cost of attending, sorted in increasing number
 
 ##Filter options
 
-####I will probably have several checkboxes for the different categories, in which users can select the category for the debt, earnings, or cost of attending (i.e. $20,000-30,000; 30,000-40,000; whatever else makes sense).
+####I will have several checkboxes for the different categories, in which users can select the category for the cost of attending minus average financial aid (i.e. under $5000; $5,000-10,000; and above $10,000).
 
 ##Live data applications
 
